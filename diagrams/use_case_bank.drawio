@@ -1,0 +1,79 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:145.0) Gecko/20100101 Firefox/145.0" version="29.0.3">
+  <diagram name="Page-1" id="EYg3MqegUCzYYS_CXkTB">
+    <mxGraphModel dx="1146" dy="633" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="udpHmEezL3F_eo01XPY_-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" edge="1" parent="1" source="udpHmEezL3F_eo01XPY_-1" target="udpHmEezL3F_eo01XPY_-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-1" value="client" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" vertex="1" parent="1">
+          <mxGeometry x="150" y="200" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-9" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" edge="1" parent="1" source="udpHmEezL3F_eo01XPY_-3" target="udpHmEezL3F_eo01XPY_-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-11" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#143642;" vertex="1" connectable="0" parent="udpHmEezL3F_eo01XPY_-9">
+          <mxGeometry x="0.1958" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-3" value="voir mon solde" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" vertex="1" parent="1">
+          <mxGeometry x="330" y="195" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-10" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" edge="1" parent="1" source="udpHmEezL3F_eo01XPY_-7" target="udpHmEezL3F_eo01XPY_-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-7" value="OPS" style="shape=umlActor;verticalLabelPosition=bottom;verticalAlign=top;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" vertex="1" parent="1">
+          <mxGeometry x="750" y="150" width="30" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-8" value="&lt;div&gt;calculer le solde&lt;/div&gt;&lt;div&gt;à partir des transactions&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" vertex="1" parent="1">
+          <mxGeometry x="570" y="280" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-14" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" edge="1" parent="1" source="udpHmEezL3F_eo01XPY_-12" target="udpHmEezL3F_eo01XPY_-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-15" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#143642;" vertex="1" connectable="0" parent="udpHmEezL3F_eo01XPY_-14">
+          <mxGeometry x="-0.2452" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-12" value="retirer un montant" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" vertex="1" parent="1">
+          <mxGeometry x="260" y="330" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-13" value="vérifier l&#39;adéquation du montant vs solde / découvert" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" vertex="1" parent="1">
+          <mxGeometry x="470" y="400" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-17" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;dashed=1;entryX=0.427;entryY=1.029;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.743;exitY=0.1;exitDx=0;exitDy=0;exitPerimeter=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" edge="1" parent="1" source="udpHmEezL3F_eo01XPY_-13" target="udpHmEezL3F_eo01XPY_-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="460" y="400" as="sourcePoint" />
+            <mxPoint x="554" y="432" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-18" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];labelBackgroundColor=none;fontColor=#143642;" vertex="1" connectable="0" parent="udpHmEezL3F_eo01XPY_-17">
+          <mxGeometry x="-0.2452" y="1" relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-19" style="rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.046;entryY=0.302;entryDx=0;entryDy=0;entryPerimeter=0;labelBackgroundColor=none;strokeColor=#A8201A;fontColor=default;" edge="1" parent="1" source="udpHmEezL3F_eo01XPY_-1" target="udpHmEezL3F_eo01XPY_-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-20" value="&lt;div&gt;calculer le solde à partir des transactions&lt;/div&gt;" style="html=1;shape=mxgraph.sysml.package;overflow=fill;labelX=270;align=left;spacingLeft=5;verticalAlign=top;spacingTop=-3;strokeColor=#0F8B8D;fontColor=#143642;fillColor=#FAE5C7;" vertex="1" parent="1">
+          <mxGeometry x="70" y="600" width="340" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-23" value="&lt;div align=&quot;left&quot;&gt;dans un autre doc&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;de type SADT (modèle boite noire)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div align=&quot;left&quot;&gt;&lt;br&gt;&lt;/div&gt;" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=center;strokeColor=#006EAF;fontColor=#ffffff;fillColor=#1ba1e2;" vertex="1" parent="1">
+          <mxGeometry x="60" y="470" width="210" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.147;entryY=-0.001;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#A8201A;fontColor=#143642;fillColor=#FAE5C7;dashed=1;dashPattern=1 4;endArrow=none;endFill=0;" edge="1" parent="1" source="udpHmEezL3F_eo01XPY_-23" target="udpHmEezL3F_eo01XPY_-20">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-26" value="&lt;div&gt;chercher les transactions&lt;/div&gt;&lt;div&gt;à partir du solde commités&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" vertex="1" parent="1">
+          <mxGeometry x="150" y="640" width="140" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="udpHmEezL3F_eo01XPY_-27" value="&lt;div&gt;chercher le solde pivot&lt;/div&gt;" style="ellipse;whiteSpace=wrap;html=1;labelBackgroundColor=none;fillColor=#FAE5C7;strokeColor=#0F8B8D;fontColor=#143642;" vertex="1" parent="1">
+          <mxGeometry x="120" y="750" width="140" height="70" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
