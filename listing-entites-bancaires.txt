@@ -1,0 +1,168 @@
+LES PRINCIPALES ENTITÉS DANS UNE APPLICATION BANCAIRE
+=====================================================
+
+## ENTITÉS PRINCIPALES = entités liées à la raison d'être de la banque
+
+### 1. Client / Customer
+- identifiant unique (ID)
+- nom, prénom
+- date de naissance
+- adresse, contacts
+- pièces d'identité
+- statut (actif, suspendu, fermé)
+- segment (particulier, professionnel, entreprise)
+
+### 2. Compte / Account
+- numéro de compte (IBAN)
+- type (courant, épargne, titre, crédit)
+- solde actuel
+- devise
+- date d'ouverture
+- statut (actif, gelé, clos)
+- découvert autorisé
+- propriétaire(s) (Client)
+
+### 3. Transaction / Operation
+- identifiant unique
+- montant
+- date et heure
+- type (débit, crédit, virement, prélèvement)
+- libellé / description
+- compte source
+- compte destination (si transfert)
+- statut (en attente, validée, rejetée)
+- solde après opération
+
+### 4. Carte Bancaire / Card
+- numéro de carte (PAN)
+- type (débit, crédit, prépayée)
+- date d'expiration
+- cryptogramme (CVV)
+- plafonds (retrait, paiement)
+- statut (active, bloquée, expirée)
+- compte associé
+
+
+=> critique pour le business (banque de détail)
+=> secondaire d'un point de vue technique (supporte les entités principales)
+### 5. Prêt / Loan
+- identifiant du prêt
+- type (immobilier, consommation, personnel)
+- montant emprunté
+- taux d'intérêt
+- durée (en mois)
+- mensualité
+- capital restant dû
+- date de début
+- échéances
+- garanties
+
+## ENTITÉS SECONDAIRES => supportent les entités principales
+
+### 6. Bénéficiaire / Beneficiary
+- nom
+- IBAN
+- BIC
+- statut (vérifié, en attente)
+
+### 7. Virement / Transfer
+- montant
+- date d'exécution
+- type (immédiat, programmé, permanent)
+- fréquence (si permanent)
+- motif
+
+### 8. Prélèvement / Direct Debit
+- créancier
+- montant (fixe ou variable)
+- mandat
+- fréquence
+- date d'échéance
+
+### 9. Chéquier / Checkbook
+- numéro de chéquier
+- nombre de chèques
+- statut
+- date d'émission
+
+### 10. Agence / Branch
+- code agence
+- nom
+- adresse
+- horaires
+- conseillers
+
+### 11. Conseiller / Advisor
+- identifiant
+- nom, prénom
+- spécialité
+- portefeuille clients
+- agence
+
+## ENTITÉS COMPLIANCE & SÉCURITÉ
+
+### 12. Alerte Fraude / Fraud Alert
+- transaction suspecte
+- niveau de risque
+- statut (en cours, résolu)
+- règle déclenchée
+
+### 13. Document / Document
+- type (RIB, relevé, contrat)
+- date de création
+- format (PDF, image)
+- lien vers stockage
+
+### 14. Audit / Audit Log
+- action effectuée
+- utilisateur
+- date et heure
+- IP source
+- données modifiées
+
+## RELATIONS CLÉS ENTRE ENTITÉS
+
+Client 1──n Compte
+Client 1──n Carte
+Client 1──n Prêt
+Compte 1──n Transaction
+Compte 1──n Carte
+Compte 1──n Bénéficiaire
+Transaction n──1 Compte (source)
+Transaction n──1 Compte (destination)
+Prêt 1──n Échéance
+Client n──1 Agence
+Client n──1 Conseiller
+
+## MODÈLE SIMPLIFIÉ
+
+┌─────────────┐
+│   Client    │
+│-------------|
+│ +id         │
+│ +nom        │
+│ +email      │
+└──────┬──────┘
+       │ 1
+       │ possède
+       │ *
+┌──────┴──────┐     1  effectue  *  ┌──────────────┐
+│   Compte    │─────────────────────│ Transaction  │
+│-------------|                     │--------------|
+│ +numero     │                     │ +id          │
+│ +solde      │                     │ +montant     │
+│ +type       │                     │ +date        │
+└─────────────┘                     │ +type        │
+                                    └──────────────┘
+
+## RÈGLES MÉTIER CRITIQUES
+
+1. Un compte doit toujours avoir au moins un titulaire
+2. Le solde ne peut être négatif sans découvert autorisé
+3. Chaque transaction doit être traçable et immuable
+4. Les cartes doivent être liées à un compte actif
+5. Les prêts nécessitent une analyse de solvabilité
+
+Ces entités forment le cœur métier d'une application bancaire et doivent 
+respecter les contraintes ACID et les réglementations financières 
+(KYC, AML, RGPD).
